@@ -31,6 +31,9 @@ This is a fresh restart of an earlier attempt. Nothing is playable yet; the curr
 ## Docs
 
 - [`Documentation/`](Documentation/) is the design vault. It's set up for [Obsidian](https://obsidian.md) (open the repo root as a vault), but it's plain Markdown and reads fine anywhere. Start with [Game Overview](Documentation/main/Game%20Overview.md).
+  - Obsidian plugins aren't committed, only the list of enabled ones. Install these from Obsidian's community plugin browser:
+    - **Mermaid View**
+    - **Excalidraw**: set *Settings → Excalidraw → Excalidraw folder* to `Documentation/sketches`, so new drawings stay inside the docs and out of Godot's import.
 - [PHILOSOPHY.md](PHILOSOPHY.md) explains how and why I'm working on this.
 - [TODO.md](TODO.md) is the roadmap. Actual tasks live in GitHub issues.
 
