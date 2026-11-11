@@ -2,6 +2,14 @@
 
 Status: `[ ]` not started · `[~]` in progress · `[x]` done
 
+## How this works
+
+This file is the overview of phases and milestones. Day-to-day tasks live in [GitHub issues](https://github.com/dark-swordsman/fpsgame/issues).
+
+- When a milestone is ready to start, its checklist moves into a GitHub issue (one issue per milestone), and the list here is replaced with a link to that issue.
+- From then on, the issue is the source of truth for that checklist. Tick items off there, not here.
+- An item is split out into a sub-issue only when it grows big enough to need its own discussion or branch.
+
 ## Phase 1: Base game
 
 **Goal:**
@@ -21,13 +29,7 @@ See [Inventory](Documentation/main/Systems/Inventory.md)
 
 This would also inherently include the concept of Items
 
-- [ ] May need to formalize the PlayerCharacter into a script so it can interface with things involved with it
-- [ ] A core inventory class
-- [ ] Inventory UI (player based at first)
-- [ ] A core item class
-- [ ] An API to read/write that inventory
-- [ ] Enforcing weight limits
-- [ ] An API to pickup/manage items
+Tracked in [#2](https://github.com/dark-swordsman/fpsgame/issues/2)
 
 ### Milestone 1.2:
 

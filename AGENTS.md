@@ -12,6 +12,7 @@ Guidance for AI agents working in this repo. The details live in the files below
 
 - Godot 4.7 project (Forward Plus, Jolt Physics); the version is set in `project.godot`.
 - Tasks are tracked as GitHub issues on `dark-swordsman/fpsgame`.
+- [ROADMAP.md](ROADMAP.md) holds the phase and milestone overview. Follow its "How this works" section for moving milestone checklists into issues.
 - `dark-swordsman/fpsgame-legacy` is the archived first attempt. Use it for reference only, and don't assume its architecture applies here.
 
 ## Docs
