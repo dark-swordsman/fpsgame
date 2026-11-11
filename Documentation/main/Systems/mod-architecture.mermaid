@@ -1,0 +1,33 @@
+flowchart TD
+    subgraph core["Core Platform"]
+        direction TB
+        MA["ModAPI\nautoload — discovers &amp; loads mods"]
+        SS["StateSystem\nC++ singleton — runs the simulation"]
+        CR["ContentRegistry\nItems · Enemies · Weapons · etc."]
+        DB["DomainBus\nGame events — emit &amp; subscribe"]
+        MA --- CR
+        MA --- DB
+        MA --- SS
+    end
+
+    subgraph mod["Your Mod"]
+        direction LR
+        C["Content\nitems, enemies, weapons"]
+        P["Processor\nruns each sim tick"]
+        H["Event handler\nreacts to game events"]
+    end
+
+    MA -->|"discovers &amp; initialises"| mod
+
+    C -->|"register()"| CR
+    P -->|"register_processor()"| SS
+    H <-->|"subscribe / emit"| DB
+
+    SS -. "tick(dt, entities)" .-> P
+
+    style core fill:#1a1a2e,stroke:#4a4a8a,color:#ccccff
+    style mod fill:#1a2e1a,stroke:#4a8a4a,color:#ccffcc
+    style MA fill:#2a2a4a,stroke:#6a6aaa,color:#ffffff
+    style SS fill:#2a2a4a,stroke:#6a6aaa,color:#ffffff
+    style CR fill:#2a2a4a,stroke:#6a6aaa,color:#ffffff
+    style DB fill:#2a2a4a,stroke:#6a6aaa,color:#ffffff
