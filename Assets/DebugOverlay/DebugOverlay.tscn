@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dkiwwn0qoeco8"]
+
+[ext_resource type="Script" uid="uid://bqjteo3hqn5co" path="res://Assets/DebugOverlay/debug_overlay.gd" id="1_77rax"]
+
+[node name="DebugOverlay" type="Control" unique_id=1483966641]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_77rax")
+
+[node name="DebugLabelContainer" type="VBoxContainer" parent="." unique_id=497002177]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

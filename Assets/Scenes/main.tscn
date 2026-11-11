@@ -12,6 +12,9 @@ orientation = 1
 [node name="Main" type="Node" unique_id=977271251]
 
 [node name="Player" parent="." unique_id=28706119 instance=ExtResource("1_l26l0")]
+speed = 14
+fall_acceleration = 75
+mouse_sensitivity = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=117380760]
 disable_mode = 1
