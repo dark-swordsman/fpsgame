@@ -4,9 +4,9 @@ How I want to go about working on this project and why.
 
 The first iteration of this project was semi-successful. Some things worked as expected and I was making real progress.
 
-The problem was that I didn't write most of the cost myself, if at all. It was all Claude. As such, I didn't have any attachment to the code so I barely understood how it actually worked, even if on the surface I understood what it was doing.
+The problem was that I didn't write most of the code myself, if at all. It was all Claude. As such, I didn't have any attachment to the code so I barely understood how it actually worked, even if on the surface I understood what it was doing.
 
-So, as a result, there are rules now available in RULES.md that describe what is and is not allowed in this repository.
+So, as a result, there are rules now available in [RULES.md](RULES.md) that describe what is and is not allowed in this repository.
 
 ## Core Premise
 
