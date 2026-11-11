@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c1elhwcplxm20"]
+
+[ext_resource type="PackedScene" uid="uid://elfntdibafe3" path="res://Assets/PlayerCharacter/PlayerCharacter.tscn" id="1_l26l0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2div3"]
+size = Vector3(25, 0, 25)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2div3"]
+size = Vector2(25, 25)
+orientation = 1
+
+[node name="Main" type="Node" unique_id=977271251]
+
+[node name="Player" parent="." unique_id=28706119 instance=ExtResource("1_l26l0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=117380760]
+disable_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1254992956]
+shape = SubResource("BoxShape3D_2div3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1950876842]
+mesh = SubResource("QuadMesh_2div3")
