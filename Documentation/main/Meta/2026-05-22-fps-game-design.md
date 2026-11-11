@@ -126,7 +126,7 @@ Comes after a working base game. See [[Modding API]] for the design notes.
 - **Note on crafting:** if crafting is added later, item data model and storage will need to support ingredient/recipe relationships. Design item data model to be extensible on this axis even if crafting is not built yet.
 
 ### 2.5 World & Weather
-Sound propagation modifiers are published to the event bus (2.1); AI and other systems consume them.
+Sound propagation modifiers are published to the event bus (pending whether the event bus will still be a thing); AI and other systems consume them.
 - Dynamic weather: overcast, rain, fog, snow
 - Day/night cycle with dynamic lighting
 - Weather affects sound propagation (e.g. rain raises the ambient noise floor, masking footsteps)
