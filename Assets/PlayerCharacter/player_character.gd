@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var SPEED: float = 5.0 #m/s
+@export var SPRINT_MULT: float = 1.5
 @export var JUMP_VELOCITY: float = 4.5
 @export var acceleration: float = 0.5
 @export var mouse_sensitivity: int = 2
@@ -12,6 +13,12 @@ var rot_x: float = 0
 var rot_y: float = 0
 
 var input_dir: Vector2
+
+func sprintMultiply() -> float:
+	if Input.is_action_pressed("sprint"):
+		return SPRINT_MULT
+	else:
+		return 1.0
 
 func _ready() -> void:
 	DebugOverlay.register("rot_x", func() -> float: return rot_x)
@@ -56,7 +63,7 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor():
 		if direction:
-			velocity = velocity.move_toward(Vector3(direction.x * SPEED, velocity.y, direction.z * SPEED), acceleration * maxf(1, -direction.dot(velocity) * 2))
+			velocity = velocity.move_toward(Vector3(direction.x * SPEED * sprintMultiply(), velocity.y, direction.z * SPEED * sprintMultiply()), acceleration * maxf(1, -direction.dot(velocity) * 2))
 		else:
 			velocity = velocity.move_toward(Vector3(0, velocity.y, 0), acceleration)
 	# moving the character
