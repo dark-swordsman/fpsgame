@@ -52,7 +52,7 @@ This scene is the emotional target. Every system decision should be measurable a
 ## Multiplayer & Distribution
 
 - Player-hosted servers (DayZ/ARMA model)
-- Source-available code (Minecraft model)
+- Free and open-source code (MIT license)
 - Steam distribution — Steam-authenticated servers can reject custom-compiled clients
 - Official servers possible but community carries the load
 

@@ -11,7 +11,7 @@
 
 ## Distribution & Auth
 
-- Source-available code (Minecraft model)
+- Free and open-source code (MIT license)
 - Steam as primary distribution
 - Steam-authenticated server mode: servers can require Steam auth, rejecting custom-compiled clients
 - Authentication scheme inspired by password hashing — algorithm is public, secrets are not

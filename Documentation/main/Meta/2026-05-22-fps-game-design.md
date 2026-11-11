@@ -43,7 +43,7 @@ Every system decision is evaluated against this: *does it make this scene feel m
 ## Multiplayer & Distribution
 
 - Player-hosted servers (DayZ/ARMA model); community carries the load
-- Source-available code (Minecraft model)
+- Free and open-source code (MIT license)
 - Steam distribution; Steam-authenticated server mode rejects custom-compiled clients
 - Server operators can configure all persistence and gameplay rules
 - Steam auth implementation method (Steamworks GDExtension vs. custom handshake) is an open question that must be resolved before Phase 3 begins
