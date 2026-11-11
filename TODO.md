@@ -2,7 +2,7 @@
 
 Actual tasks will be handled with GitHub issues.
 
-Otherwise, this is a general overview of the roadmap:
+Otherwise, this is a general overview of the [roadmap](ROADMAP.md):
 
 ## Create some basic game first.
 

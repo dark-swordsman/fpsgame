@@ -20,7 +20,7 @@ It won't be this way at the start, but this is the end goal.
 
 ## Status
 
-This is a fresh restart of an earlier attempt. Nothing is playable yet; the current focus is getting a basic game working before modding or optimization. See [TODO.md](TODO.md) for the roadmap.
+This is a fresh restart of an earlier attempt. Nothing is playable yet; the current focus is getting a basic game working before modding or optimization. See [ROADMAP.md](ROADMAP.md) for the roadmap.
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ This is a fresh restart of an earlier attempt. Nothing is playable yet; the curr
     - **Mermaid View**
     - **Excalidraw**: set *Settings → Excalidraw → Excalidraw folder* to `Documentation/sketches`, so new drawings stay inside the docs and out of Godot's import.
 - [PHILOSOPHY.md](PHILOSOPHY.md) explains how and why I'm working on this.
-- [TODO.md](TODO.md) is the roadmap. Actual tasks live in GitHub issues.
+- [ROADMAP.md](ROADMAP.md) is the roadmap. Actual tasks live in GitHub issues.
 
 ## AI Usage Disclaimer
 
