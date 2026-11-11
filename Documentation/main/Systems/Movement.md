@@ -1,7 +1,5 @@
 ---
 updated: 2026-06-19
-covers:
-  - scripts/player/**
 ---
 
 # Movement
@@ -17,4 +15,4 @@ covers:
 ## Notes
 
 - Movement should complement gunplay — snappy repositioning without arcade feel
-- Sound from movement is a gameplay element (footsteps, debris) — see [[World & Environment]]
+- Sound from movement is a gameplay element (footsteps, debris) — see [[Environment|World & Environment]]

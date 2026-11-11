@@ -1,12 +1,11 @@
 ---
-updated: 2026-06-19
-covers:
-  - gdextension/modding/src/modding_api/**
-  - scripts/autoloads/mod_api.gd
-  - scripts/mod_loader.gd
+updated: 2026-11-10
 ---
 
 # Modding API
+
+> [!warning] Deferred, needs review
+> Modding comes after a working base game (see [[TODO]]). These notes come from the previous iteration and are kept as reference for later. Every section needs review before any of it is built.
 
 ## Summary
 
@@ -18,8 +17,6 @@ Architecturally it has four responsibilities:
 2. **Event bus** — The central nervous system for inter-system communication. Sound propagation, weather changes, AI stimulus, economy ticks — all published through the bus so any system (or mod) can subscribe without tight coupling.
 3. **Asset pipeline** — How mod assets are packaged, discovered, loaded, and unloaded. Godot's `.pck` format is the natural fit; the question is how mod packages are structured and validated.
 4. **Script exposure layer** — What GDScript / GDExtension APIs mods are allowed to call. This is the trust boundary: some internal APIs are fine to expose, others (networking internals, save file access) need to be gated.
-
-The Modding API is built first in Phase 2. All other Phase 2 systems (Gunplay, AI, Inventory, etc.) are implemented as consumers of it — they prove the API works by being the first mods.
 
 ---
 
@@ -44,7 +41,6 @@ The Modding API is built first in Phase 2. All other Phase 2 systems (Gunplay, A
 
 ### Event Bus
 
-- **Relationship to Phase 1 SoundBus:** Separate system. `SoundBus` is a Phase 1 prototype; the Modding API event bus is the Phase 2 replacement for inter-system communication. Phase 1 code is not expected to survive unchanged.
 - **Typed events:** Events are Resource subclasses. Mods can define and publish their own event types — the bus does not maintain a registry of known types.
 - **Domain buses:** Each domain (combat, AI, economy, world, sound, etc.) has its own bus. Mods can create their own buses for their own event domains. Buses can run on separate threads.
 - **No cross-bus communication:** Any system or mod subscribes directly to whichever bus it cares about. There is no bridging layer between buses. If the AI module needs to react to combat events, it subscribes to the combat bus directly.
@@ -66,7 +62,7 @@ The Modding API is built first in Phase 2. All other Phase 2 systems (Gunplay, A
 
 ### Extension Points
 
-- **Registration mechanism:** Both auto-discovery (place a Resource in a known folder structure and the loader finds it) and explicit registration (call `register(resource)` from a mod entry-point script) are supported. The entry-point script is the core of actual mod loading — it's where a mod initialises itself, subscribes to buses, and registers content. **Entry-point design is resolved** — see `docs/superpowers/specs/2026-05-28-modding-api-mvp-design.md`. Each mod declares its entry-point GDScript path in its manifest; the loader calls `func initialize(api: ModAPI) -> void` once per mod in dependency order.
+- **Registration mechanism:** Both auto-discovery (place a Resource in a known folder structure and the loader finds it) and explicit registration (call `register(resource)` from a mod entry-point script) are supported. The entry-point script is the core of actual mod loading — it's where a mod initialises itself, subscribes to buses, and registers content. In the previous iteration (spec in `fpsgame-legacy`), each mod declares its entry-point GDScript path in its manifest; the loader calls `func initialize(api: ModAPI) -> void` once per mod in dependency order.
 
 - **Override and replace:** Mods can replace content from any other mod, including base game content. Since the base game is itself a mod, "overriding base game content" and "overriding another mod's content" are the same operation. This enables complex and emergent mod interactions — a balance mod overriding a weapon mod's stats, a total conversion replacing everything. This is intentional and desirable.
 

@@ -1,5 +1,8 @@
 # Mod Author Guide
 
+> [!warning] Legacy reference, needs review
+> This describes how modding worked in the previous iteration's code (StateSystem, processors, DomainBus). None of it exists in this project. It's kept as reference only and needs review before any of it is reused.
+
 ## How mods plug into the game
 
 ![[mod-architecture.mermaid]]

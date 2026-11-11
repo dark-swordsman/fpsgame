@@ -1,5 +1,8 @@
 # Phase 1 Playtest Feel Notes — 2026-05-25
 
+> [!note] From the legacy prototype
+> These notes come from playtesting the previous iteration's mood scene (`fpsgame-legacy`). The scene and code they mention don't exist here, but the feel impressions still apply.
+
 > These are loose impressions from the first north star smoke test, not a requirements list. Treat as starting points for discussion, not mandates.
 
 ## Context

@@ -1,5 +1,8 @@
 # Idea: Navigable Architecture Map
 
+> [!warning] Legacy reference, needs review
+> Written during the previous iteration. The layer diagram below shows that project's stack (StateSystem, GDExtension, Godot 4.6, Windows) and doesn't match this project. Kept for the idea itself; it needs review before it's used.
+
 **Status:** Idea — not started  
 **Date noted:** 2026-06-01
 

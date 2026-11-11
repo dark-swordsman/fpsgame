@@ -10,7 +10,7 @@
 
 - Sound-reactive — enemies respond to player and environmental sounds
 - Sound as a core gameplay mechanic: footsteps, gunshots, and environmental noise attract or alert AI
-- AI behavior tied to environment (see [[World & Environment]])
+- AI behavior tied to environment (see [[Environment|World & Environment]])
 
 ## Notes
 

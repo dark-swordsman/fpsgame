@@ -1,7 +1,5 @@
 ---
 updated: 2026-06-20
-covers:
-  - experiments/gunplay-slice/**
 ---
 
 # Gunplay
@@ -17,6 +15,9 @@ Somewhere in the ballpark of Tarkov, STALKER, and Counter-Strike — to be refin
 - Neither is dominant in all situations
 
 ### Spread model — gun offset, not bullet jitter
+
+> [!note] Reference design
+> This model was built and tuned in the previous iteration and worked well. It's kept as-is as a reference for now; the stat names are from that code and don't exist here yet.
 
 The bullet **always** leaves straight down the muzzle. Its only intrinsic dispersion is
 the gun's mechanical accuracy, an **MOA** weapon stat (`accuracy_moa`) applied as a tiny

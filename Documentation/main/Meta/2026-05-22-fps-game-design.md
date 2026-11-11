@@ -1,5 +1,5 @@
 ---
-updated: 2026-06-19
+updated: 2026-11-10
 ---
 
 # FPS Game Design Spec
@@ -9,7 +9,7 @@ updated: 2026-06-19
 
 A hardcore open-world survival FPS with player-hosted servers, first-class modding support, and an atmosphere-driven design philosophy. Influences: DayZ, STALKER/Misery, Tarkov, Insurgency: Sandstorm, Hunt: Showdown, ARMA.
 
-Engine: Godot 4.6.3 (Forward Plus, Jolt Physics, Vulkan; D3D12 is an optional Windows-only fallback)
+Engine: Godot 4.7 (Forward Plus, Jolt Physics)
 
 ---
 
@@ -61,29 +61,16 @@ Every system decision is evaluated against this: *does it make this scene feel m
 
 ## Build Strategy
 
-**A → B → C:**
-
-1. Scene — get the north star feeling playable first (prototype code, no API)
-2. Systems — build each system through the modding API; Phase 1 code is ported or replaced
-3. Loop — wire systems into a real game
-
-**Note on Phase 1 code:** Phase 1 is deliberately pre-API prototype work. The player controller, AI enemy, and bunker door built in Phase 1 are proof-of-concept. When Phase 2 begins with the modding API, these systems are rebuilt or ported to go through it. Phase 1 code is not expected to survive unchanged.
-
-## Implementation Planning Structure
-
-Plans live in `docs/superpowers/plans/` and follow a two-tier hierarchy:
-
-**Master plans** (one per phase) — high-level task breakdown, links to sub-plans for complex systems. Gives the full picture of what a phase delivers and in what order.
-
-**Sub-plans** (one per major system within a phase) — detailed, bite-sized implementation steps with exact file paths, code, and test commands. These are what gets executed.
-
-Phase 1 is small enough to be a single plan with no sub-plans. Phase 2 and Phase 3 will each have a master plan linking out to a sub-plan per system (Modding API, Gunplay, AI, etc.) since each is a multi-week effort on its own.
+The roadmap order lives in [[TODO]] (base game first, then modding, then optimization). Tasks are tracked as GitHub issues.
 
 ---
 
 ## Phase 1: The North Star Scene
 
 **Goal:** A playable mood proof-of-concept. Not a game — a feeling. Stand on the hill at night, hear the world, feel something.
+
+> [!todo] Define the core loop
+> The mood scene is the first target, but the vibe isn't a loop. A clearer core gameplay loop still needs to be defined beyond the mood/atmosphere idea.
 
 **Deliverables:**
 - First-person player controller: walk, look, Tarkov-style inertia
@@ -103,19 +90,18 @@ Phase 1 is small enough to be a single plan with no sub-plans. Phase 2 and Phase
 
 ## Phase 2: Systems
 
-Each system built as a proper vertical slice, tested in the Phase 1 scene. All systems are built *on top of* the modding API — the base game uses the same extension points as community mods.
+Each system built as a proper vertical slice, tested in the Phase 1 scene. For now, systems are built directly in the game; the modding API comes later (see [[TODO]]), at which point systems may be reworked to go through it.
 
-### 2.1 Modding API (Foundation)
-Built first. Everything in Phase 2 onward is a consumer of this.
+### 2.1 Modding API (Deferred)
+Comes after a working base game. See [[Modding API]] for the design notes.
 - Extension points: items, weapons, AI behaviors, maps, game modes, UI, sound/assets
 - Resource loading system for mod assets
 - Script exposure layer (what GDScript/GDExtension APIs mods can call)
-- Event bus for inter-system communication — this is also the owner of sound propagation events (see 2.3, 2.5)
+- Event bus for inter-system communication
 - Server-side mod enable/disable per server operator
 
 ### 2.2 Gunplay
-First system built as a mod — proves the API works end-to-end.
-- One weapon implemented through the mod API
+- One weapon to start
 - Time-delayed hitscan ballistics: path calculated on fire (with bullet drop), hit resolved after travel-time delay; if target moves out of path during travel, it misses
 - Recoil: somewhere in the Tarkov / STALKER / CSGO ballpark — refined through iteration
 - Hipfire: usable at close range (~10-20m), degrades at range
@@ -125,8 +111,7 @@ First system built as a mod — proves the API works end-to-end.
 - **Ballistics must expose velocity as a modifiable parameter** — barrel length and suppressor effects (added in 2.6) modify the same velocity value; design for this extension now
 
 ### 2.3 AI
-Sound propagation is owned by the event bus (2.1). AI is a consumer of sound events.
-- AI subscribes to sound events from the event bus: position, radius, intensity
+- AI reacts to sound events: position, radius, intensity
 - NavigationAgent3D-based pathfinding
 - Behavior states: patrol → alert → investigate → chase → attack
 - Enemy type 1: zombie/crawler (common)
@@ -136,7 +121,7 @@ Sound propagation is owned by the event bus (2.1). AI is a consumer of sound eve
 - The grid provides spatial/visual layout; weight is the primary capacity constraint
 - Items are placed freely on the grid (no forced Tetris shapes); weight limit is what stops you from taking everything
 - Auto-stack and auto-sort functions
-- Item data model: all properties defined in mod-accessible resources
+- Item data model: all properties defined in data resources (so they can be exposed to mods later)
 - Actions: pick up, drop, share with players, access dead player inventory
 - **Note on crafting:** if crafting is added later, item data model and storage will need to support ingredient/recipe relationships. Design item data model to be extensible on this axis even if crafting is not built yet.
 
@@ -151,7 +136,7 @@ Sound propagation modifiers are published to the event bus (2.1); AI and other s
 Consumes and extends the ballistics velocity parameter established in 2.2.
 - Attachment rail system: Dovetail, Picatinny
 - Attachment types: suppressors, optics, grips, barrels (at minimum)
-- Suppressor: slightly *increases* velocity (acts as a barrel extension), reduces sound signature (publishes reduced-intensity sound event to event bus), and increases jam chance (higher backpressure into the action from gun gassing) — modeled closer to real life than the common game trope of velocity reduction
+- Suppressor: slightly *increases* velocity (acts as a barrel extension), reduces sound signature (lower-intensity sound for AI to react to), and increases jam chance (higher backpressure into the action from gun gassing) — modeled closer to real life than the common game trope of velocity reduction
 - Barrel length: longer = higher velocity, more weight, worse ergonomics, larger physical footprint (harder to maneuver in tight spaces); shorter = lower velocity, lighter, faster handling, better CQB
 - Durability: items degrade with use
 

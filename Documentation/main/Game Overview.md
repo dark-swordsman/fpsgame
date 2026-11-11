@@ -1,5 +1,11 @@
 # Game Overview
 
+---
+
+Disclaimer: A lot of these docs were written with AI in the previous iteration of this project. They still hold a lot of the core ideas and goals, but they need to be gone through and verified for accuracy. Until this disclaimer is removed, take every line in these docs with a grain of salt.
+
+---
+
 A hardcore open-world survival FPS with player-hosted servers, first-class modding support, and a cinematic, atmosphere-driven design philosophy.
 
 ## North Star Scene
@@ -28,7 +34,7 @@ This scene is the emotional target. Every system decision should be measurable a
 ## Core Design Pillars
 
 1. **Atmosphere first** — lighting, sound, and AI must work together
-2. **Modding as a first-class feature** — the base game is just the default mod; game modes, items, maps all exposed via a clean API
+2. **Modding as a first-class feature** — the base game is just the default mod; game modes, items, maps all exposed via a clean API *(planned for after the base game; see [[TODO]])*
 3. **Player agency** — personal safe space (bunker), player-hosted servers, community-driven
 4. **Authentic feel without simulation hell** — realistic enough to feel weighty, not so deep it's inaccessible
 
@@ -54,6 +60,8 @@ This scene is the emotional target. Every system decision should be measurable a
 
 ## Modding Philosophy
 
+*Planned for after the base game; see [[TODO]].*
+
 - Game modes are mods; the core is an engine for mods
 - Clean, documented mod API — easier than ARMA/DayZ
 - Standard extension points: items, weapons, maps, AI, game modes, UI
@@ -66,12 +74,12 @@ This scene is the emotional target. Every system decision should be measurable a
 - [[Movement]]
 - [[Inventory]]
 - [[AI]]
-- [[World & Environment]]
+- [[Environment|World & Environment]]
 - [[Weapons & Attachments]]
 - [[Medical]]
 - [[Vehicles]]
 - [[Spawn System]]
 - [[Economy & Trading]]
-- [[Bunker / Safe Base]]
+- [[Bunker - Safe Base|Bunker / Safe Base]]
 - [[Multiplayer & Networking]]
 - [[Modding API]]
