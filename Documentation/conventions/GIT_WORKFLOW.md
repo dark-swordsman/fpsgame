@@ -17,7 +17,7 @@ main ─────────────────────────
     - Design doc edits made during a milestone go on the milestone branch, so the same files aren't edited in two places.
 - `milestone/<number>`, e.g. `milestone/1.2`: cut from `main` when a milestone starts.
     - One open milestone at a time.
-    - Small changes can be committed directly to it.
+    - Small changes, and early exploratory work before features are well-defined, can be committed directly to it.
 - `feature/<short-name>`, e.g. `feature/item-stacking`: cut from the milestone branch.
     - If the feature has its own sub-issue, include the number: `feature/14-item-stacking`.
     - Always branch from the milestone, not from another feature branch.
