@@ -21,6 +21,11 @@ Guidance for AI agents working in this repo. The details live in the files below
 - Design content is the human's creative work. Reorganizing, formatting and fixing links is fine; changing what a design doc *says* needs approval first.
 - `.gdignore` files keep `Documentation/` and `.obsidian/` out of Godot's import. Keep them.
 
+## Code conventions
+
+- [Documentation/conventions/](Documentation/conventions/) holds the human's code conventions, one file per topic. Read the relevant ones before reviewing or debugging code, and point out code that breaks them.
+- The conventions are the human's to write. Suggest wording or formatting fixes if you like, but don't add or change rules without approval.
+
 ## Hygiene
 
 - Draft commit messages and show them for review before committing. Keep commits small with plain, descriptive messages.
