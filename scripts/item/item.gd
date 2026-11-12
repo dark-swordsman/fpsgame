@@ -3,15 +3,18 @@ class_name Item extends Resource
 var item_name: String
 var weight: int # grams
 var volume: int # arbitrary for now
-var grid_size: Vector2
+var grid_size: Vector2 # inventory grid size; im unsure if this needs to be moved later
+var description: String
 
 func _init(
 	p_item_name: String = "", 
-	p_weight: int = 0, 
+	p_description: String = "",
+	p_weight: int = 0,
 	p_volume: int = 0,
 	p_grid_size: Vector2 = Vector2(0,0),
 ) -> void:
 	item_name = p_item_name
+	description = p_description
 	weight = p_weight
 	volume = p_volume
 	grid_size = p_grid_size
