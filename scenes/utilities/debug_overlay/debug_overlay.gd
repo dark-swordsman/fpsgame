@@ -59,5 +59,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 	
 func _physics_process(delta: float) -> void:
-	for debugInput in registeredInputs:
+	for debugInput: String in registeredInputs:
 		registeredInputs[debugInput].update()

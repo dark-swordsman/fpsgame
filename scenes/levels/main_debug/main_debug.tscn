@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://elfntdibafe3" path="res://scenes/characters/player_character/player_character.tscn" id="1_oitaq"]
 [ext_resource type="Material" uid="uid://d3l1cmrjnltl6" path="res://assets/materials/baseplate/baseplate.tres" id="2_k4n86"]
+[ext_resource type="PackedScene" uid="uid://x663w5qqtd46" path="res://scenes/item_manager/item_manager.tscn" id="3_c61dr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2div3"]
 size = Vector3(100, 0, 100)
@@ -50,3 +51,5 @@ compositor = SubResource("Compositor_5ttyf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment" unique_id=2141330545]
 transform = Transform3D(1, 0, 0, 0, -0.707744, 0.70646906, 0, -0.70646906, -0.707744, 0, 0, 0)
+
+[node name="ItemManager" parent="." unique_id=2068260552 instance=ExtResource("3_c61dr")]
