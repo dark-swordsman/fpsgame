@@ -28,7 +28,7 @@ ambient_light_color = Color(0.83137256, 0.93333334, 0.98039216, 1)
 
 [sub_resource type="Compositor" id="Compositor_5ttyf"]
 
-[node name="Main" type="Node" unique_id=977271251]
+[node name="World" type="Node" unique_id=977271251]
 
 [node name="Player" parent="." unique_id=28706119 instance=ExtResource("1_oitaq")]
 
@@ -53,3 +53,5 @@ compositor = SubResource("Compositor_5ttyf")
 transform = Transform3D(1, 0, 0, 0, -0.707744, 0.70646906, 0, -0.70646906, -0.707744, 0, 0, 0)
 
 [node name="ItemManager" parent="." unique_id=2068260552 instance=ExtResource("3_c61dr")]
+
+[node name="WorldItems" type="Node" parent="." unique_id=977140171]
