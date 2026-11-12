@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://elfntdibafe3"]
 
 [ext_resource type="Script" uid="uid://dr0yebjbcp2o0" path="res://scenes/characters/player_character/player_character.gd" id="1_i3yfc"]
+[ext_resource type="Script" uid="uid://ie2pofr2lyv8" path="res://scenes/characters/player_character/camera_3d.gd" id="2_aw11i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2div3"]
 radius = 0.4
@@ -16,6 +17,7 @@ script = ExtResource("1_i3yfc")
 
 [node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=1724484109]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+script = ExtResource("2_aw11i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1892621491]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)

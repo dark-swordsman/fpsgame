@@ -21,6 +21,7 @@ func sprintMultiply() -> float:
 		return 1.0
 
 func _ready() -> void:
+	Globals.player = self
 	DebugOverlay.register("rot_x", func() -> float: return rot_x)
 	DebugOverlay.register("rot_y", func() -> float: return rot_y)	
 	DebugOverlay.register("velocity", func() -> Vector3: return velocity)	
