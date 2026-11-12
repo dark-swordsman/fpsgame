@@ -28,6 +28,7 @@ Guidance for AI agents working in this repo. The details live in the files below
 
 ## Hygiene
 
+- Follow [GIT_WORKFLOW.md](Documentation/conventions/GIT_WORKFLOW.md) for branching, merging and PR bases.
 - Draft commit messages and show them for review before committing. Keep commits small with plain, descriptive messages.
 - Don't commit `.godot/`, editor-local files, or `.obsidian/workspace*.json`.
 - Don't edit `project.godot`, scenes, or scripts unless the human explicitly asks for a pipeline change.
