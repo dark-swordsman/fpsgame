@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://c1elhwcplxm20"]
 
-[ext_resource type="PackedScene" uid="uid://elfntdibafe3" path="res://Assets/PlayerCharacter/PlayerCharacter.tscn" id="1_l26l0"]
-[ext_resource type="Material" uid="uid://d3l1cmrjnltl6" path="res://Assets/Materials/Baseplate/baseplate.tres" id="2_qplxx"]
+[ext_resource type="PackedScene" uid="uid://elfntdibafe3" path="res://scenes/characters/player_character/player_character.tscn" id="1_oitaq"]
+[ext_resource type="Material" uid="uid://d3l1cmrjnltl6" path="res://assets/materials/baseplate/baseplate.tres" id="2_k4n86"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2div3"]
 size = Vector3(100, 0, 100)
 
 [sub_resource type="QuadMesh" id="QuadMesh_2div3"]
 lightmap_size_hint = Vector2i(502, 502)
-material = ExtResource("2_qplxx")
+material = ExtResource("2_k4n86")
 size = Vector2(100, 100)
 orientation = 1
 
@@ -29,7 +29,7 @@ ambient_light_color = Color(0.83137256, 0.93333334, 0.98039216, 1)
 
 [node name="Main" type="Node" unique_id=977271251]
 
-[node name="Player" parent="." unique_id=28706119 instance=ExtResource("1_l26l0")]
+[node name="Player" parent="." unique_id=28706119 instance=ExtResource("1_oitaq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=117380760]
 disable_mode = 1

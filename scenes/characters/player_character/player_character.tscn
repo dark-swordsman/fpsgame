@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://elfntdibafe3"]
 
-[ext_resource type="Script" uid="uid://dr0yebjbcp2o0" path="res://Assets/PlayerCharacter/player_character.gd" id="1_8dl2s"]
+[ext_resource type="Script" uid="uid://dr0yebjbcp2o0" path="res://scenes/characters/player_character/player_character.gd" id="1_i3yfc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2div3"]
 radius = 0.4
@@ -10,7 +10,7 @@ height = 1.8
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-script = ExtResource("1_8dl2s")
+script = ExtResource("1_i3yfc")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1943446652]
 

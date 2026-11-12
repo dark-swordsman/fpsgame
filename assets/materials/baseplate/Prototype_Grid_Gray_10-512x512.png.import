@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqo57uvikvd1u"
-path.s3tc="res://.godot/imported/Prototype_Grid_Gray_10-512x512.png-15a4019caac173e7a5c07e053f0696c5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Prototype_Grid_Gray_10-512x512.png-d4d4452af61336f0973d8ce4cc65fa28.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Materials/Baseplate/Prototype_Grid_Gray_10-512x512.png"
-dest_files=["res://.godot/imported/Prototype_Grid_Gray_10-512x512.png-15a4019caac173e7a5c07e053f0696c5.s3tc.ctex"]
+source_file="res://assets/materials/baseplate/Prototype_Grid_Gray_10-512x512.png"
+dest_files=["res://.godot/imported/Prototype_Grid_Gray_10-512x512.png-d4d4452af61336f0973d8ce4cc65fa28.s3tc.ctex"]
 
 [params]
 
