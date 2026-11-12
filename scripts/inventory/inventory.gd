@@ -1,10 +1,11 @@
 class_name Inventory extends Resource
 
-var items: Array[Item]
+var items: Array[InventoryItem]
 var max_weight: int # in grams
 var max_volume: int # arbitrary unit for now
 
-class ItemWrapper:
+class InventoryItem:
+	# representation of the item in the inventory
 	var grid_position: Vector2i
 	var item: Item
 	
@@ -14,7 +15,7 @@ class ItemWrapper:
 	
 
 func _init(
-	p_items: Array[Item] = [],
+	p_items: Array[InventoryItem] = [],
 	p_max_weight: int = 0,
 	p_max_volume: int = 0,
 ) -> void:
