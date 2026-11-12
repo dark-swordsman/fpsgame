@@ -4,7 +4,7 @@ When initializing a class, `_init()` variables:
 - need default values
     - Why: for example, with `.duplicate()`, it inits with defaults *then* copies values
 - must be typed
-    - Why: o_o
+    - Why: [STRICT_TYPING.md](STRICT_TYPING.md)
 - must be prefixed with `p_`
     - Why: `self.variable = variable` causes a shadowing warning
 
