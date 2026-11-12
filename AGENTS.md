@@ -17,7 +17,7 @@ Guidance for AI agents working in this repo. The details live in the files below
 
 ## Docs
 
-- `Documentation/` is an Obsidian vault (the vault root is the repo root). Use standard Markdown links with repo-root-relative paths, wrapping paths that contain spaces in angle brackets: `[Spawn System](<Documentation/main/Systems/Spawn System.md>)`. Existing `[[wikilinks]]` are fine to leave. Keep frontmatter `updated:` dates where files already have them.
+- `Documentation/` is an Obsidian vault (the vault root is the repo root). Use standard Markdown links with paths relative to the linking file (these resolve in Obsidian, VS Code and GitHub), wrapping paths that contain spaces in angle brackets: from the repo root, `[Spawn System](<Documentation/main/Systems/Spawn System.md>)`; from a sibling file in `Systems/`, `[Spawn System](<Spawn System.md>)`. Existing `[[wikilinks]]` are fine to leave. Keep frontmatter `updated:` dates where files already have them.
 - Design content is the human's creative work. Reorganizing, formatting and fixing links is fine; changing what a design doc *says* needs approval first.
 - `.gdignore` files keep `Documentation/` and `.obsidian/` out of Godot's import. Keep them.
 
