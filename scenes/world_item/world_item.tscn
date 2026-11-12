@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7b3fx328m2h1"]
+
+[ext_resource type="Script" uid="uid://dh6kx16htd1c1" path="res://scenes/world_item/world_item.gd" id="1_xb2jn"]
+
+[node name="WorldItem" type="Node3D" unique_id=623614793]
+script = ExtResource("1_xb2jn")

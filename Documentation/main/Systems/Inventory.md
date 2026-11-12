@@ -19,7 +19,7 @@
 
 ## Design Thoughts
 
-When an item is inside an inventory, it does only exist as data until it is dropped.
+When an item is inside an inventory, it only exists as data until it is dropped. Once it's dropped, it exists as data and a game object. The game object references the instance of the item it's representing.
 
 When I pick up a prop, the prop goes away and something representing it gets stored.
 
