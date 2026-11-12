@@ -5,7 +5,7 @@
 [resource]
 albedo_texture = ExtResource("1_wpxqf")
 metallic_specular = 0.23
-roughness = 0.45
+roughness_texture = ExtResource("1_wpxqf")
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.9659363
 texture_filter = 5
