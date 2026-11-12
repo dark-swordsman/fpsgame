@@ -4,6 +4,15 @@ var items: Array[Item]
 var max_weight: int # in grams
 var max_volume: int # arbitrary unit for now
 
+class ItemWrapper:
+	var grid_position: Vector2i
+	var item: Item
+	
+	func _init(p_grid_position: Vector2i = Vector2i(0,0), p_item: Item = null) -> void:
+		grid_position = p_grid_position
+		item = p_item
+	
+
 func _init(
 	p_items: Array[Item] = [],
 	p_max_weight: int = 0,
