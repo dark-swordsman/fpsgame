@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://c1elhwcplxm20"]
 
 [ext_resource type="PackedScene" uid="uid://elfntdibafe3" path="res://Assets/PlayerCharacter/PlayerCharacter.tscn" id="1_l26l0"]
+[ext_resource type="Material" uid="uid://d3l1cmrjnltl6" path="res://Assets/Materials/Baseplate/baseplate.tres" id="2_qplxx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2div3"]
-size = Vector3(25, 0, 25)
+size = Vector3(100, 0, 100)
 
 [sub_resource type="QuadMesh" id="QuadMesh_2div3"]
-size = Vector2(25, 25)
+lightmap_size_hint = Vector2i(502, 502)
+material = ExtResource("2_qplxx")
+size = Vector2(100, 100)
 orientation = 1
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x8c8k"]

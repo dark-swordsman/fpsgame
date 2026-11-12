@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3l1cmrjnltl6"]
+
+[ext_resource type="Texture2D" uid="uid://bc0myyfv20h1i" path="res://Assets/Materials/Baseplate/Prototype_Grid_Gray_08-512x512_001.png" id="1_wpxqf"]
+
+[resource]
+albedo_texture = ExtResource("1_wpxqf")
+metallic_specular = 0.23
+roughness = 0.45
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.9659363
+texture_filter = 5

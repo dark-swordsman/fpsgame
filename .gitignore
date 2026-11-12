@@ -6,3 +6,6 @@
 .obsidian/workspace*.json
 .obsidian/graph.json
 .obsidian/plugins/
+
+# Editor / Krita backup files
+*~
